@@ -9,11 +9,11 @@ public class SistemaConcesionario {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Mensaje de bienvenida
+        // mensaje de bienvenida
         System.out.println("¡Bienvenido a la Concesionaria de Automoviles!");
         System.out.println("Por favor, registrese para continuar.");
 
-        // Registro del cliente
+        // registro del cliente
         Cliente cliente = new Cliente();
         System.out.print("Ingrese su nombre: ");
         cliente.nombre = scanner.nextLine();
@@ -62,7 +62,7 @@ public class SistemaConcesionario {
         }
 
         // seleccion del vehiculo
-        System.out.print("Seleccione el número del vehiculo que desea comprar (1 o 2): ");
+        System.out.print("Seleccione el numero del vehiculo que desea comprar (1 o 2): ");
         int seleccionVehiculo = scanner.nextInt();
         scanner.nextLine();
 
@@ -89,7 +89,7 @@ public class SistemaConcesionario {
         }
         System.out.println("3. No deseo opciones adicionales");
 
-        System.out.print("Seleccione una opción (1, 2 o 3): ");
+        System.out.print("Seleccione una opcion (1, 2 o 3): ");
         int seleccionOpcion = scanner.nextInt();
         scanner.nextLine();
 
@@ -101,17 +101,17 @@ public class SistemaConcesionario {
         // resumen de la venta
         Venta venta = new Venta();
         venta.fechaVenta = new Date(); // fecha actual
-        venta.matriculaNuevoVehiculo = "XYZ789"; // matricula generada
+        venta.matriculaNuevoVehiculo = "XYZ789";
         venta.cliente = cliente;
-        venta.vendedor = vendedor1; // vendedor asignado
+        venta.vendedor = vendedor1; 
         venta.vehiculo = vehiculoSeleccionado;
         venta.opcionesSeleccionadas = opcionesSeleccionadas;
 
-        // formatear la fecha
+        // formatea la fecha
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String fechaFormateada = formatoFecha.format(venta.fechaVenta);
 
-        System.out.println("\n¡Gracias por su compra! Aqui está el resumen de su venta:");
+        System.out.println("\n¡Gracias por su compra! Aqui esta el resumen de su venta:");
         System.out.println("Venta {");
         System.out.println("    fechaVenta=" + fechaFormateada + ",");
         System.out.println("    matriculaNuevoVehiculo='" + venta.matriculaNuevoVehiculo + "',");

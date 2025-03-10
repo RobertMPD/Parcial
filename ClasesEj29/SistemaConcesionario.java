@@ -101,13 +101,13 @@ public class SistemaConcesionario {
         // resumen de la venta
         Venta venta = new Venta();
         venta.fechaVenta = new Date(); // fecha actual
-        venta.matriculaNuevoVehiculo = "XYZ789"; // matricula generada automaticamente
+        venta.matriculaNuevoVehiculo = "XYZ789"; // matricula generada
         venta.cliente = cliente;
         venta.vendedor = vendedor1; // vendedor asignado
         venta.vehiculo = vehiculoSeleccionado;
         venta.opcionesSeleccionadas = opcionesSeleccionadas;
 
-        // formatear la fecha para mostrarla de manera legible
+        // formatear la fecha
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String fechaFormateada = formatoFecha.format(venta.fechaVenta);
 
